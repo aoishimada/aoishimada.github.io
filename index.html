@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!--mata要素のcharset属性に、UTF-8を指定しておかないと文字化けします。-->
+<meta charset="UTF-8">
+<title>Web1年 2017年1月11日</title>
+<!--mata要素のname属性にvierwportを指定すると、
+スマートフォン等でサイトを見たときにスマホ実際の画面幅に合わせる形でサイトの見た目を調整してくれる。-->
+<meta name="viewport" content="width=device-width">
+<!--font Awesome CSSファイル本体をサーバー上から直接読み込んでいる。なのでこの記述がないとサイト上で使うtwittwr,facebook等のアイコンが呼び出せない-->
+
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<!--下の記述はjquery本体をHTML内に読みこむための記述で、googleのサーバー上にホスティングされているファイルを直接読み込んでいる。-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+/*
+$(function(){...});の記述は、ページがロード完了後に実行しますよって言う意味*/
+	$(function() {
+		$("#menubtn").click(function(){
+/*menuのID名のHTML要素をスライドダウンさせたり、スライドアップさせたりする記述。
+ここの　slideToggle();っていう記述がスライドの動作を実行させる命令*/
+			$("#menu").slideToggle();
+		})
+	});
+</script>
+</head>
+<body>
+
+
+<div class="boxA">
+	
+	<div class="boxA-inner">
+			<div class="box1">
+
+				<div class="site">
+				<h1><img src="img/logo-large.png" alt=""class="topname" width"250" height="33"></h1>
+				</div>
+
+			</div>
+
+			<div class="box1-2">
+			
+			<button type="button" id="menubtn">
+			<i class="fa fa-bars"></i><span>MENU</span>
+			</button>
+			<nav class="menu" id="menu"><!--上の段落-->
+				<ul>
+				<li><a href="#">トップ</a></li>
+				<li><a href="#">沿革</a></li>
+				<li><a href="#">事業紹介</a></li>
+				<li><a href="#">採用情報</a></li>
+				<li><a href="#">お問い合わせ</a></li>
+				</ul>
+			</nav>
+
+			</div>
+	</div>
+
+</div>
+<div class="boxB">
+
+		<div class="yajirushi">
+		<ul>
+		<li><a href="#">トップ<i class="fa fa-chevron-right"></i></a></li>
+		<li><a href="#">事業紹介<i class="fa fa-chevron-right"></i></a></li>
+		</ul>
+		</div>
+
+	<div class="box2">
+
+		<div class="news">
+		<ul>
+		<li><a href="#"><i class="fa fa-caret-square-o-down"></i>
+		事業紹介</a><!--小さい四角い方-->
+		<li><a href="#">データの蓄積</a></li>
+		<li><a href="#">データの分析・解析</a></li>
+		<li><a href="#">わかりやすく視覚化</a></li>
+		<li><a href="#">アプリで有効活用</a></li>
+		<li><a href="#">24時間サポート</a></li>
+		<li><a href="#">実績紹介</a></li>
+		</ul>
+		</div>
+	</div>
+
+	<div class="box3">
+		<div class="box3.5">
+			<h1>データ分析・解析</h1>
+			<img src="img/header-data.jpg" alt="" class="topimg">
+			<div class="box3-inner">
+				<p>蓄積したデータを活用するためには、いかに分析・解析するかが大切なポイントとなります。デザインカレッジでは標準的な視点からの分析に加えて、活用目的に応じた解析も提供します。</p>
+			</div>
+		</div>
+		<div class="check">
+		<h2><i class="fa fa-check-square-o"></i>平均値のチェック</h2>
+		<p>基本的な平均値のチェックです。対象データ群の代表的な値を知る事ができます。ただし、平均値だけではデータの偏りなどの問題は見えてきません。</p>
+
+		<h2><i class="fa fa-check-square-o"></i>分布のチェック</h2>
+		<p>統計的手法を用い、蓄積したデータの分布をチェックします。これにより、平均値だけではみえてこない問題や特徴を導きだします。</p>
+
+		<h2><i class="fa fa-check-square-o"></i>相関関係・因果関係の抽出</h2>
+		<p>複数のデータを組み合わせて分析、蓄積し、相関関係および因果関係があると考えられるデータを抽出します。</p>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="box4">
+	<div class="copyright">
+	<p>Copyright &copy;
+	WEB1年　後期課題</p>
+</div>
